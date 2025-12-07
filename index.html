@@ -1,40 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivanna Eudora Kean Alumni Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #800000; /* Maroon */
-        }
-        p {
-            color: #333;
-        }
-        .highlight {
-            color: #FFC0CB; /* Pink */
-        }
-        .gold {
-            color: #FFD700; /* Gold */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEKHS Class of 1987 Alumni</title>
+
+  <!-- Basic SEO -->
+  <meta name="description"
+        content="Official site for the Ivanna Eudora Kean High School Class of 1987 alumni. Reunion updates, class list, photos, and ways to reconnect with classmates." />
+
+  <style>
+    :root {
+      /* IEKHS color system */
+      --maroon: #800000;
+      --maroon-dark: #4d0000;
+      --gold: #ffd700;
+      --pink: #ff6fa8;
+      --bg-light: #f4f4f4;
+      --text-main: #333333;
+      --text-muted: #666666;
+
+      --shadow-soft: 0 0 10px rgba(0, 0, 0, 0.08);
+      --radius-card: 6px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+    }
+
+    /* HEADER */
+
+    .header {
+      background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 10px 16px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: 0.03em;
+    }
+
+    .header h2 {
+      margin: 6px 0 0;
+      font-size: 18px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .header p {
+      margin: 6px 0 0;
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    /* NAVBAR */
+
+    .nav {
+      background-color: var(--maroon-dark);
+      text-align: center;
+      padding: 8px 4px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav a {
+      display: inline-block;
+      color: var(--gold);
+      margin: 0 10px;
+      padding: 6px 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      border-radius: 999px;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .nav a:hover,
+    .nav a:focus {
+      background-color: var(--gold);
+      color: var(--maroon-dark);
+      outline: none;
+    }
+
+    /* MAIN LAYOUT */
+
+    .container {
+      max-width: 960px;
+      margin: 24px auto 32px;
+      padding: 0 12px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-soft);
+      padding: 18px 18px 20px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      color: var(--maroon);
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 4px;
+      margin: 0 0 10px;
+      font-size: 19px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 14px;
+      margin: 6px 0 10px;
+    }
+
+    .highlight {
+      color: var(--pink);
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 18px;
+      line-height: 1.6;
+      font-size: 14px;
+      margin: 4px 0 10px;
+    }
+
+    a {
+      color: var(--maroon-dark);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      padding: 12px 0 20px;
+    }
+
+    /* SMALL SCREENS */
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 22px;
+      }
+
+      .header h2 {
+        font-size: 15px;
+      }
+
+      .nav a {
+        margin: 0 4px;
+        padding: 5px 8px;
+        font-size: 12px;
+      }
+
+      .card {
+        padding: 14px 14px 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="gold">Welcome to the Ivanna Eudora Kean Alumni Page</h1>
-        <p class="highlight">This is a simple starting point with your school colors. Customize this page with your own content and style!</p>
-    </div>
+  <header class="header">
+    <h1>Ivanna Eudora Kean High School</h1>
+    <h2>Class of 1987 Alumni</h2>
+    <p>St. Thomas, U.S. Virgin Islands</p>
+  </header>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#welcome">Home</a>
+    <a href="#reunion">Reunion Info</a>
+    <a href="#class-list">Class List</a>
+    <a href="#photos">Photos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main class="container">
+    <section id="welcome" class="card">
+      <h3 class="section-title">Welcome, Class of 1987!</h3>
+      <p>
+        Welcome to the official
+        <span class="highlight">Ivanna Eudora Kean High School Class of 1987</span>
+        alumni page. This site will be the home base for class news, reunion
+        updates, photos, and ways to reconnect with your classmates.
+      </p>
+      <p>
+        Share this link with other Vikings from the Class of ’87 so we can start
+        building out the class list, photo gallery, and reunion details.
+      </p>
+    </section>
+
+    <section id="reunion" class="card">
+      <h3 class="section-title">Upcoming Reunion</h3>
+      <p><strong>Next Reunion:</strong> <em>(Details coming soon)</em></p>
+      <ul>
+        <li>Date &amp; Time: TBD</li>
+        <li>Location: TBD – St. Thomas, U.S. Virgin Islands</li>
+        <li>Planned activities: Meet &amp; greet, formal program, after-party</li>
+      </ul>
+      <p>
+        As plans are confirmed, this section will be updated with official information
+        and contact details for the reunion committee. We can later add RSVP forms,
+        ticket links, and payment details here.
+      </p>
+    </section>
+
+    <section id="class-list" class="card">
+      <h3 class="section-title">Class Members</h3>
+      <p>
+        A full list of the Class of 1987 will be added here. This can include:
+      </p>
+      <ul>
+        <li>Alphabetical list of classmates</li>
+        <li>Short updates (where they live now, careers, families)</li>
+        <li>“In Memoriam” section for classmates we’ve lost</li>
+      </ul>
+      <p>
+        If you’re part of the Class of ’87 and want to help build this list,
+        please reach out using the contact section below. One person can be the
+        class record-keeper and send updates for us to post.
+      </p>
+    </section>
+
+    <section id="photos" class="card">
+      <h3 class="section-title">Photo Gallery</h3>
+      <p>
+        This section will showcase graduation photos, school memories, and
+        reunion pictures. We can later link to a shared Google Drive, Dropbox
+        folder, or gallery where classmates can upload photos.
+      </p>
+      <p>
+        For now, this is just a placeholder – once photos are ready, we’ll turn
+        this into a proper gallery grid.
+      </p>
+    </section>
+
+    <section id="contact" class="card">
+      <h3 class="section-title">Stay Connected</h3>
+      <p>
+        Have updates, photos, or reunion questions? You can contact the
+        Class of 1987 alumni organizers here:
+      </p>
+      <p>
+        Email:
+        <a href="mailto:iekhs1987alumni@example.com">
+          iekhs1987alumni@example.com
+        </a>
+        <br />
+        <small>(Replace this with the real email when you’re ready.)</small>
+      </p>
+      <p>
+        You can also create a WhatsApp group, Facebook group, or mailing list
+        and link it here so classmates have one simple place to join.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 IEKHS Class of 1987 Alumni. Built and maintained for the Vikings of ’87.
+  </footer>
 </body>
 </html>
